@@ -41,7 +41,7 @@ BEGIN
 			cst_key, 
 			cst_firstname, 
 			cst_lastname, 
-			cst_marital_status, 
+			[cst_marital_status], 
 			cst_gndr,
 			cst_create_date
 		)
@@ -51,10 +51,10 @@ BEGIN
 			TRIM(cst_firstname) AS cst_firstname,
 			TRIM(cst_lastname) AS cst_lastname,
 			CASE 
-				WHEN UPPER(TRIM(cst_marital_status)) = 'S' THEN 'Single'
-				WHEN UPPER(TRIM(cst_marital_status)) = 'M' THEN 'Married'
+				WHEN UPPER(TRIM(cst_matrial_status)) = 'S' THEN 'Single'
+				WHEN UPPER(TRIM(cst_matrial_status)) = 'M' THEN 'Married'
 				ELSE 'n/a'
-			END AS cst_marital_status, -- Normalize marital status values to readable format
+			END AS cst_matrial_status, -- Normalize marital status values to readable format
 			CASE 
 				WHEN UPPER(TRIM(cst_gndr)) = 'F' THEN 'Female'
 				WHEN UPPER(TRIM(cst_gndr)) = 'M' THEN 'Male'
@@ -199,16 +199,16 @@ BEGIN
 		PRINT '>> Inserting Data Into: silver.erp_loc_a101';
 		INSERT INTO silver.erp_loc_a101 (
 			cid,
-			cntry
+			[cntry]
 		)
 		SELECT
 			REPLACE(cid, '-', '') AS cid, 
 			CASE
-				WHEN TRIM(cntry) = 'DE' THEN 'Germany'
-				WHEN TRIM(cntry) IN ('US', 'USA') THEN 'United States'
-				WHEN TRIM(cntry) = '' OR cntry IS NULL THEN 'n/a'
-				ELSE TRIM(cntry)
-			END AS cntry -- Normalize and Handle missing or blank country codes
+				WHEN TRIM(country) = 'DE' THEN 'Germany'
+				WHEN TRIM(country) IN ('US', 'USA') THEN 'United States'
+				WHEN TRIM(country) = '' OR country IS NULL THEN 'n/a'
+				ELSE TRIM(country)
+			END AS country -- Normalize and Handle missing or blank country codes
 		FROM bronze.erp_loc_a101;
 	    SET @end_time = GETDATE();
         PRINT '>> Load Duration: ' + CAST(DATEDIFF(SECOND, @start_time, @end_time) AS NVARCHAR) + ' seconds';
