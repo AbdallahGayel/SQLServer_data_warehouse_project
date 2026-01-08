@@ -69,19 +69,12 @@ data-warehouse-project/
 ├── tests/                    # Scripts to check if the data quality is good.
 │
 └── README.md                 # The file you are reading right now.
-'''
+
+
+⬆️ **This line fixes everything:**
 
 ---
 
-## 🛠️ Tools Used
-I used the following tools to complete this project:
-
-- **SQL Server Express**: To host the database.
-- **SQL Server Management Studio (SSMS)**: To write queries and manage the database.
-- **Draw.io**: To design the database diagrams.
-- **Git & GitHub**: For version control.
-
----
 
 ## 🚀 How to Run This Project
 If you want to run this project on your own machine, follow these steps:
