@@ -51,7 +51,7 @@ I used industry-standard tools to build this free of cost:
 
 Here is a simple map of this repository so you can find what you need:
 
-```text
+```
 data-warehouse-project/
 │
 ├── datasets/                 # The raw CSV files (ERP and CRM data) go here.
@@ -69,9 +69,42 @@ data-warehouse-project/
 ├── tests/                    # Scripts to check if the data quality is good.
 │
 └── README.md                 # The file you are reading right now.
-text'''
-
+'''
 
 ---
-## 📝 License
-This project is open-source under the MIT License. You are free to look at the code, learn from it, or use it for your own portfolio.
+
+## 🛠️ Tools Used
+I used the following tools to complete this project:
+
+- **SQL Server Express**: To host the database.
+- **SQL Server Management Studio (SSMS)**: To write queries and manage the database.
+- **Draw.io**: To design the database diagrams.
+- **Git & GitHub**: For version control.
+
+---
+
+## 🚀 How to Run This Project
+If you want to run this project on your own machine, follow these steps:
+
+### Prerequisites
+- Make sure you have **SQL Server** and **SSMS** installed.
+
+### Steps
+1. **Download Data**  
+   Get the CSV files from the `datasets/` folder.
+
+2. **Setup Database**  
+   Create a new database in SQL Server.
+
+3. **Run Scripts**  
+   Execute the SQL scripts located in the `scripts/` folder in the following order:
+   - `bronze/` — Load data  
+   - `silver/` — Clean data  
+   - `gold/` — Model data  
+
+---
+
+## 🛡️ License
+This project is licensed under the **MIT License**.  
+You are free to use it, learn from it, and modify it for your own portfolio.
+
