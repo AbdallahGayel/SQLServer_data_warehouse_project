@@ -51,7 +51,7 @@ I used industry-standard tools to build this free of cost:
 
 Here is a simple map of this repository so you can find what you need:
 
-```
+```text
 data-warehouse-project/
 │
 ├── datasets/                 # The raw CSV files (ERP and CRM data) go here.
