@@ -51,46 +51,64 @@ I used industry-standard tools to build this free of cost:
 
 Here is a simple map of this repository so you can find what you need:
 
-```text
+```
 data-warehouse-project/
 │
-├── datasets/                 # The raw CSV files (ERP and CRM data) go here.
+├── datasets/                           # Raw datasets used for the project (ERP and CRM data)
 │
-├── docs/                     # Documentation.
-│   ├── data_architecture.png # A picture of how the system works.
-│   ├── data_models.png       # A picture of the database tables (Star Schema).
-│   └── data_catalog.md       # A list explaining what each dataset contains.
+├── docs/                               # Project documentation and architecture details
+│   ├── etl.drawio                      # Draw.io file shows all different techniquies and methods of ETL
+│   ├── data_architecture.drawio        # Draw.io file shows the project's architecture
+│   ├── data_catalog.md                 # Catalog of datasets, including field descriptions and metadata
+│   ├── data_flow.drawio                # Draw.io file for the data flow diagram
+│   ├── data_models.drawio              # Draw.io file for data models (star schema)
+│   ├── naming-conventions.md           # Consistent naming guidelines for tables, columns, and files
 │
-├── scripts/                  # The actual SQL code is here.
-│   ├── bronze/               # Code to load raw data.
-│   ├── silver/               # Code to clean the data.
-│   └── gold/                 # Code to build the final reports.
+├── scripts/                            # SQL scripts for ETL and transformations
+│   ├── bronze/                         # Scripts for extracting and loading raw data
+│   ├── silver/                         # Scripts for cleaning and transforming data
+│   ├── gold/                           # Scripts for creating analytical models
 │
-├── tests/                    # Scripts to check if the data quality is good.
+├── tests/                              # Test scripts and quality files
 │
-└── README.md                 # The file you are reading right now.
+├── README.md                           # Project overview and instructions
+├── LICENSE                             # License information for the repository
+├── .gitignore                          # Files and directories to be ignored by Git
+└── requirements.txt                    # Dependencies and requirements for the project
+```
+---
 
+## 🛠️ Tools Used
+I used the following tools to complete this project:
 
-🚀 How to Run This Project
+- **SQL Server Express**: To host the database.
+- **SQL Server Management Studio (SSMS)**: To write queries and manage the database.
+- **Draw.io**: To design the database diagrams.
+- **Git & GitHub**: For version control.
+
+---
+
+## 🚀 How to Run This Project
 If you want to run this project on your own machine, follow these steps:
 
-Prerequisites
-Make sure you have SQL Server and SSMS installed.
+### Prerequisites
+- Make sure you have **SQL Server** and **SSMS** installed.
 
-Steps
-Download Data Get the CSV files from the datasets/ folder.
+### Steps
+1. **Download Data**  
+   Get the CSV files from the `datasets/` folder.
 
-Setup Database Create a new database in SQL Server.
+2. **Setup Database**  
+   Create a new database in SQL Server.
 
-Run Scripts Execute the SQL scripts located in the scripts/ folder in the following order:
+3. **Run Scripts**  
+   Execute the SQL scripts located in the `scripts/` folder in the following order:
+   - `bronze/` — Load data  
+   - `silver/` — Clean data  
+   - `gold/` — Model data  
 
-bronze/ — Load data
+---
 
-silver/ — Clean data
-
-gold/ — Model data
-
-🛡️ License
-This project is licensed under the MIT License.
-
+## 🛡️ License
+This project is licensed under the **MIT License**.  
 You are free to use it, learn from it, and modify it for your own portfolio.
