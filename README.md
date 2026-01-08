@@ -71,33 +71,26 @@ data-warehouse-project/
 └── README.md                 # The file you are reading right now.
 
 
-⬆️ **This line fixes everything:**
-
----
-
-
-## 🚀 How to Run This Project
+🚀 How to Run This Project
 If you want to run this project on your own machine, follow these steps:
 
-### Prerequisites
-- Make sure you have **SQL Server** and **SSMS** installed.
+Prerequisites
+Make sure you have SQL Server and SSMS installed.
 
-### Steps
-1. **Download Data**  
-   Get the CSV files from the `datasets/` folder.
+Steps
+Download Data Get the CSV files from the datasets/ folder.
 
-2. **Setup Database**  
-   Create a new database in SQL Server.
+Setup Database Create a new database in SQL Server.
 
-3. **Run Scripts**  
-   Execute the SQL scripts located in the `scripts/` folder in the following order:
-   - `bronze/` — Load data  
-   - `silver/` — Clean data  
-   - `gold/` — Model data  
+Run Scripts Execute the SQL scripts located in the scripts/ folder in the following order:
 
----
+bronze/ — Load data
 
-## 🛡️ License
-This project is licensed under the **MIT License**.  
+silver/ — Clean data
+
+gold/ — Model data
+
+🛡️ License
+This project is licensed under the MIT License.
+
 You are free to use it, learn from it, and modify it for your own portfolio.
-
